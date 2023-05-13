@@ -8,7 +8,6 @@ const $ = cheerio.load(html);
 
 async function showTitle(){
     const title = $("title").text();
-    console.log(title)
     return title;
 }
 
