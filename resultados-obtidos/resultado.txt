@@ -1,0 +1,9 @@
+{
+  "Titulo": "Tênis Olympikus Ultraleve 232G Feminino - Off white+Coral",
+  "Preço": "R$ 139,99",
+  "Imagem": "https://static.netshoes.com.br/produtos/tenis-olympikus-ultraleve-232g-feminino/05/2I2-4961-205/2I2-4961-205_zoom1.jpg?ts=1680544920&ims=544x",
+  "Descrição": "Aposte no conforto e qualidade do novo Tênis de Corrida Feminino da Olympikus para te acompanhar nos seus treinos diários. Com design moderno, o running indicado para caminhadas e corridas leves possui cabedal fabricado com material extremamente macio e respirável que garante mais frescor durante o uso. O calcanhar é acolchoado e oferece suporte aos pés enquanto o cadarço garante ajuste eficaz. A entressola em EVA conta com tecnologia que proporciona alto nível de maciez entre uma passada e outra, elasticidade, evita deformação e conta com efeito trampolim; já o solado de borracha proporciona aderência e tração por onde você passar. Indicado para corredoras de pisada neutra, o Tênis Olympikus feminino acompanha as atletas mais ambiciosas na busca pelo melhor pace. Aproveite!"
+}
+
+Link da foto que comprova o resultado Obtido: 
+https://s4.aconvert.com/convert/p3r68-cdx67/at4ic-znuqe.jpg

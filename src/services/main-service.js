@@ -1,33 +1,68 @@
 import mainRepository from "../repositories/main-repository.js";
-import {  badRequesterror} from "../erros/bad-request-error.js";
+import { badRequestError } from "../erros/bad-request-error.js";
+import { notFoundError } from "../erros/not-found-error.js";
 
-async function mainLogic() {
+async function tiTleLogic() {
   const titleResult = await mainRepository.showTitle();
-  const prizeResult = await mainRepository.showPrize();
-  const imageResult = await mainRepository.showImage();
-  const descriptionResult = await mainRepository.showDescription();
-  
-  if (prizeResult.length === 0) {
-    throw badRequesterror();
+
+  if (titleResult.length === 0) {
+    throw notFoundError();
   }
-  
 
-  
+  if (titleResult.length < 5) {
+    throw badRequestError("O título é muito curto.");
+  }
 
+  return titleResult;
+}
 
+async function prizeLogic() {
+  const prizeResult = await mainRepository.showPrize();
 
-  
-  
-  return {
-    Titulo: titleResult,
-    Preço: prizeResult,
-    Imagem: imageResult,
-    Descrição: descriptionResult,
-  };
+  if (prizeResult.length === 0) {
+    throw notFoundError();
+  }
+
+  if (prizeResult.length < 1) {
+    throw badRequestError("O preço é inválido.");
+  }
+
+  return prizeResult;
+}
+
+async function imageLogic() {
+  const imageResult = await mainRepository.showImage();
+
+  if (imageResult.length === 0) {
+    throw notFoundError();
+  }
+
+  if (!imageResult.startsWith("https://")) {
+    throw badRequestError();
+  }
+
+  return imageResult;
+}
+
+async function desriptionLogic() {
+  const descriptionResult = await mainRepository.showDescription();
+
+  if (descriptionResult.length === 0) {
+    throw notFoundError();
+  }
+
+  if (descriptionResult.length < 10) {
+    throw badRequestError("A descrição é muito curta.");
+  }
+
+  return descriptionResult;
 }
 
 const mainService = {
-  mainLogic,
+  tiTleLogic,
+  prizeLogic,
+  imageLogic,
+  desriptionLogic,
 };
 
 export default mainService;

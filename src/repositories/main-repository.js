@@ -12,7 +12,6 @@ async function showTitle() {
     "#content > div:nth-child(3) > section > div.short-showcase-description > section > h1"
   );
   const result = title.text();
-  console.log(result);
   return result;
 }
 
@@ -21,7 +20,6 @@ async function showPrize() {
     "#buy-box > div.if-available > div.price.price-box > div > span:nth-child(1) > strong"
   );
   const result = prize.text();
-  console.log(result);
   return result;
 }
 
@@ -30,14 +28,12 @@ async function showImage() {
     "#content > div:nth-child(3) > section > section.photo > figure > img"
   );
   const result = image.attr("src");
-  console.log(result);
   return result;
 }
 
 async function showDescription() {
   const description = $("#features > p");
   const result = description.text();
-  console.log(result);
   return result;
 }
 
