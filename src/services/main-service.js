@@ -1,4 +1,5 @@
 import mainRepository from "../repositories/main-repository.js";
+import {  badRequesterror} from "../erros/bad-request-error.js";
 
 async function mainLogic() {
   const titleResult = await mainRepository.showTitle();
@@ -7,7 +8,7 @@ async function mainLogic() {
   const descriptionResult = await mainRepository.showDescription();
   
   if (prizeResult.length === 0) {
-    throw new Error('Elemento de preço não encontrado');
+    throw badRequesterror();
   }
   
 
