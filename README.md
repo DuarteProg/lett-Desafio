@@ -1,6 +1,6 @@
 # Meu Projeto
 
-Projeto dedicado ao Desafio da empresa Lett""
+Projeto dedicado ao Desafio da empresa Lett.
 
 ## Instalação
 
